@@ -1,0 +1,119 @@
+
+nav{
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right:0;
+    top:0;
+    padding: 0 4%;
+    height: 50px;
+    background-color: linear-gradient(rgba(0, 0, 0, 0.4)), rgba(0, 0, 0, 0.4);
+    
+}
+
+nav .logo{
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav .list{
+    float: right;
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .list{
+    list-style: none;
+}
+
+nav .list a{
+    display: block;
+    text-transform: ;
+    padding: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: blueviolet;
+    text-decoration: none;
+}
+
+nav .logo:hover{
+    color: rgb(35, 11, 255);
+    transition: all 0.5s ease-in-out;
+
+}
+
+nav .list a:hover{
+    border-bottom: 2px solid rgb(254, 253, 255);
+    color: rgb(253, 253, 253);
+    border-bottom: 2px solid rgb(254, 252, 255);
+    transition: all 0.5s ease-in-out;
+}
+
+#toggle{
+    position: absolute;
+    top: -100px
+}
+
+nav .icon-bars{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav .icon-bars .line{
+    width: 30px;
+    height: 5px;
+    background-color: blueviolet;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+
+@media (max-width:768px) {
+    nav .logo{
+        float: none;
+        width: auto;
+        justify-content: center;
+    }
+    nav .list{
+        float: none;
+        position:fixed;
+        z-index: 9;
+        left: 0;
+        right: 0;
+        top: 100px;
+        bottom: 100%;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background-color: rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        transition: all .5s ease-in-out;
+    }
+    nav .list a{
+        font-size: 15px;
+    }
+    nav :checked ~ .list{
+        bottom: 0;
+    }
+    nav .icon-bars{
+        display: block;
+    }
+
+        
+}
